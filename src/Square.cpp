@@ -2,27 +2,30 @@
 #include "../headers/Square.h"
 using namespace std;
 
-Square::Square() : length(0) {}
-Square::~Square() {
+Square::Square() : mLength(0) {}
+Square::~Square()
+{
 }
 
 void Square::setDimensions(int l)
 {
-    this->length=l;
+    this->mLength = l;
     setArea();
     setPerimeter();
 }
-void Square::setArea() {
-    area = length * length;
+void Square::setArea()
+{
+    mArea = mLength * mLength;
 }
-void Square::setPerimeter() {
-    perimeter = 4 * length;
+void Square::setPerimeter()
+{
+    mPerimeter = 4 * mLength;
 }
-int Square::getArea()  {
-    return area;
+int Square::getArea()
+{
+    return mArea;
 }
-int Square::getPerimeter() {
-    return perimeter;
+int Square::getPerimeter()
+{
+    return mPerimeter;
 }
-
-

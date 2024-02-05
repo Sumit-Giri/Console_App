@@ -1,24 +1,23 @@
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-class Triangle{
+class Triangle
+{
 
-    public:
-        Triangle();
-        ~Triangle();
-        void setDimensions(int l1,int l2,int b,int h);
-        void setArea();
-        void setPerimeter();
-        double getArea();
-        int getPerimeter();
-    
+public:
+    Triangle();
+    ~Triangle();
+    void setDimensions(int l1, int l2, int b, int h);
+    void setArea();
+    void setPerimeter();
+    double getArea();
+    int getPerimeter();
 
-    private:
-        int length1;
-        int length2;
-        int base;
-        int height;
-        double area;
-        int perimeter;
-    
+private:
+    int mLength1;
+    int mLength2;
+    int mBase;
+    int mHeight;
+    double mArea;
+    int mPerimeter;
 };

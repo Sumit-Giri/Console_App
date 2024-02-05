@@ -2,27 +2,30 @@
 #include "../headers/Circle.h"
 using namespace std;
 
-Circle::Circle():radius(0),area(0),circumference(0){}
-Circle::~Circle() {
+Circle::Circle() : mRadius(0), mArea(0), mCircumference(0) {}
+Circle::~Circle()
+{
 }
 
 void Circle::setDimensions(double r)
 {
-    this->radius=r;
+    this->mRadius = r;
     setArea();
     setCircumference();
 }
-void Circle::setArea() {
-    area = 3.14 * radius * radius;
+void Circle::setArea()
+{
+    mArea = 3.14 * mRadius * mRadius;
 }
-void Circle::setCircumference() {
-    circumference = 2 * radius * 3.142856;
+void Circle::setCircumference()
+{
+    mCircumference = 2 * mRadius * 3.142856;
 }
-double Circle::getArea()  {
-    return area;
+double Circle::getArea()
+{
+    return mArea;
 }
-double Circle::getCirumference() {
-    return circumference;
+double Circle::getCirumference()
+{
+    return mCircumference;
 }
-
-

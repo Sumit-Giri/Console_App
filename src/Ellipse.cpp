@@ -4,32 +4,35 @@
 #include <cmath>
 using namespace std;
 
-Ellipse::Ellipse() : majoraxis(0), minoraxis(0) {}
-Ellipse::~Ellipse() {
-    
+Ellipse::Ellipse() : mMajoraxis(0), mMinoraxis(0) {}
+Ellipse::~Ellipse()
+{
 }
 
-void Ellipse::setDimensions(double major, double minor) {
-    this->majoraxis = major;
-    this->minoraxis = minor;
+void Ellipse::setDimensions(double major, double minor)
+{
+    this->mMajoraxis = major;
+    this->mMinoraxis = minor;
     setArea();
     setPerimeter();
 }
 
-void Ellipse::setArea() {
-    area = 3.14 * majoraxis * minoraxis;
+void Ellipse::setArea()
+{
+    mArea = 3.14 * mMajoraxis * mMinoraxis;
 }
 
-void Ellipse::setPerimeter() {
-    perimeter = 3.14 * (3 * (majoraxis + minoraxis) - sqrt((3 * majoraxis + minoraxis) * (majoraxis + 3 * minoraxis)));
+void Ellipse::setPerimeter()
+{
+    mPerimeter = 3.14 * (3 * (mMajoraxis + mMinoraxis) - sqrt((3 * mMajoraxis + mMinoraxis) * (mMajoraxis + 3 * mMinoraxis)));
 }
 
-int Ellipse::getArea() {
-    return area;
+int Ellipse::getArea()
+{
+    return mArea;
 }
 
-int Ellipse::getPerimeter() {
-    return perimeter;
+int Ellipse::getPerimeter()
+{
+    return mPerimeter;
 }
-
-

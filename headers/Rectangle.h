@@ -1,23 +1,22 @@
 // Rectangle Header file
 #include <iostream>
 
-class Rectangle {
+class Rectangle
+{
 
-    public:
-        Rectangle();
-        ~Rectangle();
+public:
+    Rectangle();
+    ~Rectangle();
 
-        void setDimensions(int l, int w);
-        void setArea();
-        void setPerimeter();
-        int getArea() ; 
-        int getPerimeter();
+    void setDimensions(int l, int w);
+    void setArea();
+    void setPerimeter();
+    int getArea();
+    int getPerimeter();
 
-    private:
-        int length;
-        int width;
-        int area;
-        int perimeter;
+private:
+    int mLength;
+    int mWidth;
+    int mArea;
+    int mPerimeter;
 };
-
-
